@@ -4,16 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Header'
 import Welcome from './Welcome'
-
-
+import MyComponent from './components/MyComponent'
+import ProductCard from './components/ProductCard'
+import ProductList from './components/ProductList'
+import Main from './pages/Main'
+import Education from './pages/Education'
 function App() {
  
 
   return (
-  <div class="flex flex-col gap-10">
-    <Header/>
-    <Welcome/>
-  </div>
+  <Main/>
   )
 }
 
