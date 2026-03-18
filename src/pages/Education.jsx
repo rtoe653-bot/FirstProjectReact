@@ -1,6 +1,7 @@
 import MyComponent from "../components/MyComponent"
 import SampleBlock from "../components/SampleBlock"
 import MyList from "../components/MyList"
+import Counter from "../components/Counter"
 function Education() {
 
     return (
@@ -9,10 +10,10 @@ function Education() {
               <MyComponent/>
               <SampleBlock/>
               <MyList/>
-              title={"Заголовок"}
-              description={"Описание"}
-              
+              <Counter/>
 
+              
+    
               
         </div>
      

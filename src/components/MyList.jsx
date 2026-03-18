@@ -13,15 +13,13 @@ function MyList() {
   
    
     return (
-      <div className=" flex flex-col flex gap-10 w-50">
-       {items.map((item)=>(
         <div>
-        <div key={item.id}></div>
-            <h2>{item["name"]}</h2>
-        <p>{item["price"]}$</p>
-        <button onClick={()=>console.log(item.id)}>Удалить</button>
-        </div>
-       ))}
+     {items.map((item)=>(
+        <SampleBlock
+        title={item.name}
+        description={item.price}
+        />
+      ))}
       </div>
    )
 
