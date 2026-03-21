@@ -1,6 +1,6 @@
 import MyComponent from "./MyComponent"
 import { useState } from "react"
-import ProductList from "./ProductList"
+import ProductList from "./blocks/ProductList"
 import SampleBlock from "./SampleBlock"
 function MyList() {
     const [items, setItems] = useState([

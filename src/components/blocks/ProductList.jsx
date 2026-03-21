@@ -1,14 +1,14 @@
 import ProductCard from "./ProductCard"
-import SampleBlock from "./SampleBlock"
+import SampleBlock from "../SampleBlock"
 import { useState } from "react"
 
 
 function ProductList() {
     const [products, setItems] = useState([
-        {description: "Description 3",name: "Телевизор", price: 750},
-        {description: "Description 4",name: "Телефон", price: 299},
+        {description: "Description 3",name: "Телевизор", price: 1999},
+        {description: "Description 4",name: "Телефон", price: 789},
         {description: "Description 5",name: "Клавиатура", price: 199},
-        {description: "Description 6",name: "Ноутбук", price: 499}
+        {description: "Description 6",name: "Ноутбук", price: 4000}
                 ])
     
     

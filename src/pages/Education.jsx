@@ -1,7 +1,7 @@
 import MyComponent from "../components/MyComponent"
 import SampleBlock from "../components/SampleBlock"
 import MyList from "../components/MyList"
-import Counter from "../components/Counter"
+import Counter from "../components/ui/Counter"
 function Education() {
 
     return (
