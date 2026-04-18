@@ -1,19 +1,6 @@
-import Header from "../Header"
-import ProductList from "../components/blocks/ProductList"
 import { useState } from "react"
 
-
-function Main() {
-    return (
-      <div>
-       <Header/>
-       <h2>Главная страница</h2>
-       <ProductList/>
-       </div>
-
-    )
-}
-function MainBlock({items ,setSearchFilters}) {
+function SearchBlock({items ,setSearchFilter}) {
     const [query, setQuery] = useState("test")
 
     function handleChange(event) {
@@ -21,10 +8,11 @@ const value = event.target.value
 const listFiltered = items.filter(item=>
     item.name.toLowerCase().includes(value.toLowerCase())
 )
-setSearchFilters(listFiltered)
+
+setSearchFilter(listFiltered)
 setQuery(value)
 console.log(value)
-    
+    }
     return(
         <input
         type="text"
@@ -34,6 +22,4 @@ console.log(value)
         />
     )
 }
-}
-
-export default Main
+export default SearchBlock
