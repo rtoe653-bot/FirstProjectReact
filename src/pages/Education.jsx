@@ -6,6 +6,7 @@ import FirstConditional from "../components/EduComponents/FirstConditional"
 import { useState } from "react"
 import OnChangeComp from "../components/ui/OnChangeComp"
 import { useEffect } from "react"
+import Users from "../components/Users"
 function Education() {
     useEffect(()=>{
         console.log("Страница Education загрузилась")
@@ -15,6 +16,7 @@ const [isVisible, setIsVisible] = useState(true)
     return (
         <div>
               <h1>Обучающая страница</h1>
+              <Users/>
               <MyComponent/>
               <SampleBlock/>
               <MyList/>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ProductCard({price, title, description }) {
+function ProductCard({ id, price, title, description }) {
     const [count, setCount ] = useState(0)
   const increment = () => {
     if (count < maxCount) {
@@ -8,14 +8,16 @@ function ProductCard({price, title, description }) {
       
     }
   };
-
+function addToBasket(idProduct, count) {
+  console.log(idProduct, count)
+}
   const decrement = () => {
     if (count > minCount) {
       setCount(count - 1);
     }
   };
   
-  let minCount = 1
+  let minCount = 0
   let maxCount = 10
     return (
       
@@ -73,7 +75,9 @@ function ProductCard({price, title, description }) {
           <div className="text-2xl font-bold text-gray-900">
           {price}
           </div>
-          <button className="bg-blue-600/90 hover:bg-blue-700 backdrop-blur-sm text-white font-medium py-2.5 px-6 rounded-full transition-colors duration-300">
+          <button className="bg-blue-600/90 hover:bg-blue-700 backdrop-blur-sm text-white font-medium py-2.5 px-6 rounded-full transition-colors duration-300"
+           onClick={()=>addToBasket(id, count)}
+           >
             Купить
           </button>
         </div>
