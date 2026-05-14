@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProductCard({ id, price, title, description }) {
     const [count, setCount ] = useState(0)
@@ -30,7 +31,9 @@ function addToBasket(idProduct, count) {
         </div>
         
 <h3 className="text-xl font-semibold text-gray-800 mb-2 backdrop-blur-sm">        
-         {title}
+     <Link to={'/product/'+id}>
+      {title}
+      </Link>    
         </h3>
         
         <p className="text-gray-600 mb-4 backdrop-blur-sm">

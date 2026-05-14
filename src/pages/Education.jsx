@@ -16,7 +16,6 @@ const [isVisible, setIsVisible] = useState(true)
     return (
         <div>
               <h1>Обучающая страница</h1>
-              <Users/>
               <MyComponent/>
               <SampleBlock/>
               <MyList/>
