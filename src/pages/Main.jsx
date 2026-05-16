@@ -1,39 +1,10 @@
-import Header from "../Header"
-import ProductList from "../components/blocks/ProductList"
-import { useState } from "react"
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
 
-
-function Main() {
-    return (
-      <div>
-       <Header/>
-       <h2>Главная страница</h2>
-       <ProductList/>
-       </div>
-
-    )
-}
-function MainBlock({items ,setSearchFilters}) {
-    const [query, setQuery] = useState("test")
-
-    function handleChange(event) {
-const value = event.target.value
-const listFiltered = items.filter(item=>
-    item.name.toLowerCase().includes(value.toLowerCase())
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
 )
-setSearchFilters(listFiltered)
-setQuery(value)
-console.log(value)
-    
-    return(
-        <input
-        type="text"
-        value={query}
-        placeholder="Поиск..."
-        onChange={handleChange}
-        />
-    )
-}
-}
-
-export default Main

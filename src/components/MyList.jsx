@@ -1,9 +1,12 @@
-import MyComponent from "./MyComponent"
+import Header from "../components/Header";  // ← исправленный путь
 import { useState } from "react"
-import ProductList from "./blocks/ProductList"
 import SampleBlock from "./SampleBlock"
 import { useEffect } from "react"
 import SearchBlock from "./ui/SearchBlock"
+import MyComponent from "./MyComponent";
+import ProductList from "./ProductList";  // ← исправьте путь (убрали blocks/)
+
+
 function MyList() {
     const [items, setItems] = useState([])
     const [filteredItems, setFilteredItems] = useState([])

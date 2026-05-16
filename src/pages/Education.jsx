@@ -1,3 +1,4 @@
+import TestForm from "../components/TestForm"
 import MyComponent from "../components/MyComponent"
 import SampleBlock from "../components/SampleBlock"
 import MyList from "../components/MyList"
@@ -16,6 +17,7 @@ const [isVisible, setIsVisible] = useState(true)
     return (
         <div>
               <h1>Обучающая страница</h1>
+              <TestForm/>
               <MyComponent/>
               <SampleBlock/>
               <MyList/>
